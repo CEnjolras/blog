@@ -1,6 +1,6 @@
 # Blog / portfolio
 
-## Theme
+## 🎨 Theme
 
 [AstroPaper](https://astro.build/themes/details/astro-paper/)
 
@@ -17,6 +17,9 @@
 **Linting** - [ESLint](https://eslint.org)
 
 ## 🧞 Commands
+
+dawn.ns.cloudflare.com
+sergi.ns.cloudflare.com
 
 | Command                | Action                                                                                                                           |
 | :--------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
