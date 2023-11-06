@@ -1,7 +1,7 @@
 ---
 author: Clément Enjolras
 pubDatetime: 2023-11-04T17:39:00Z
-title: Automatiser la mise en place de son environnement de dev avec Ansible
+title: Automatiser la Mise en Place de Son Environnement de Dev avec Ansible
 postSlug: automatiser-la-mise-en-place-de-votre-environnement-de-développement-avec-ansible
 featured: false
 draft: false

@@ -50,7 +50,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 ## Comment créer des routes simples avec `<Routes>` et `<Route>` ?
 
-Définir le chemin de l'URL avec `path` et le composant à afficher avec `element`. Par exemple :
+Définir le chemin de l'URL avec `path` et le composant à afficher avec `element`.
 
 ```jsx
 <Routes>
@@ -83,7 +83,7 @@ Pour créer des routes dynamiques et récupérer les paramètres, utiliser le fo
 //<Route path="/livres/:id?" element={<Book />} /> pour rendre le paramettre optionnel
 ```
 
-Récupérer les paramètres dans le composant cible en utilisant `useParams`. Par exemple :
+Récupérer les paramètres dans le composant cible en utilisant `useParams`.
 
 ```jsx
 import { useParams } from "react-router-dom";
@@ -181,7 +181,7 @@ Personnaliser le comportement des liens avec les propriétés `replace`, `reload
 
 ## Comment récupérer des données passées avec `state` ?
 
-Utiliser `useLocation` pour récupérer les données passées avec `state` dans le composant cible. Par exemple :
+Utiliser `useLocation` pour récupérer les données passées avec `state` dans le composant cible.
 
 ```jsx
 import { useLocation } from "react-router-dom";
