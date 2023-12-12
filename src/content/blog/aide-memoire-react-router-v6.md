@@ -1,8 +1,8 @@
 ---
-title: Aide-Mémoire React Router v6
+title: Aide-Mémoire React Router
 author: Clément Enjolras
 pubDatetime: 2023-11-06T11:18:00.000+00:00
-postSlug: aide-memoire-react-router-v6
+postSlug: aide-memoire-react-router
 featured: false
 draft: false
 tags:
