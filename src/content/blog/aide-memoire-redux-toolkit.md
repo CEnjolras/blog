@@ -40,7 +40,7 @@ npm install @reduxjs/toolkit react-redux
 
 ### 2. Créer un store
 
-Créer un fichier `store.js` traditionnellement dans un dossier `store` à la racine du projet. Ce fichier contient la configuration du store Redux.
+Créer un fichier `store.js` traditionnellement dans un dossier `store`. Ce fichier contient la configuration du store Redux.
 
 ```jsx
 import { configureStore } from "@reduxjs/toolkit";
@@ -56,7 +56,7 @@ A la racine de l'application, fournir le store à l'application avec le composan
 
 ```jsx
 import { Provider } from "react-redux";
-import { store } from "./store/store"; // Le store créé précédemment
+import store from "./store/store"; // Le store créé précédemment
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
@@ -156,4 +156,46 @@ const Counter = () => {
     </div>
   );
 };
+```
+
+## Middleware
+
+Un middleware est une fonction qui permet de modifier le comportement de Redux. Il est appelé à chaque fois qu'une action est envoyée au store. Il peut être utilisé pour logger les actions, pour gérer des actions asynchrones, etc.
+
+### 1. Créer un middleware
+
+Créer un fichier `./store/middleware.js` :
+
+```jsx
+const monMiddleware = store => next => action => {
+  // Votre logique de middleware va ici
+  // Vous pouvez accéder au magasin Redux et à l'action
+  console.log("Action du Middleware:", action);
+
+  // Vous pouvez également envoyer des actions depuis le middleware
+  // Par exemple, pour envoyer conditionnellement une action :
+  if (action.type === "CONDITION") {
+    store.dispatch({ type: "AUTRE_ACTION" });
+  }
+
+  // Appelez le middleware suivant ou le réducteur dans la chaîne
+  return next(action);
+};
+```
+
+### 2. Ajouter le middleware au store
+
+Dans le fichier `store.js` :
+
+```jsx
+import debugMiddleware from "@/store/middlewares/debugMiddleware";
+import loginMiddleware from "@/store/middlewares/loginMiddleware";
+
+export default configureStore({
+  reducer: {
+    //...
+  },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware().concat(debugMiddleware, loginMiddleware),
+});
 ```
