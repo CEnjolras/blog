@@ -63,3 +63,12 @@ docker rmi <image-name>
 ```bash
 docker run -p <port-local>:<port-conteneur> <image-name>
 ```
+
+## Créer un user non-root
+
+```Dockerfile
+
+# Create a group and user
+RUN addgroup -S node && adduser -S node -G node
+
+```
