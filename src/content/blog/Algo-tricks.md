@@ -16,6 +16,12 @@ description: "Tricks généraux d'algo"
 
 `Array.sort()` utilise un algorithme de tri hybride, qui combine un tri rapide et un tri par insertion. La complexité temporelle de `Array.sort()` est de O(n log n) dans le meilleur et le pire des cas.
 
+## Ajouter un element au milieux d'un tableau
+
+```javascript
+arr.splice(index, 0, value);
+```
+
 ## Dernier index d'un tableau
 
 ```javascript
