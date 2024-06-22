@@ -36,4 +36,14 @@ for (const [index, value] of arr.entries()) {
 }
 ```
 
-## Splitter
+## Obtenir un array depuis une string
+
+```javascript
+const arr = Array.from('hello');
+```
+
+## Obtenir une string depuis un array
+
+```javascript
+const str = arr.join('');
+```
